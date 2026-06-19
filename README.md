@@ -6,23 +6,17 @@
 
 
 
-This project detects whether a message is Spam or Ham using Machine Learning.
+This project detects whether a message is SPAM or HAM using Machine Learning.
 
 
 
-The model is trained using TF-IDF Vectorization and Logistic Regression on the SMS Spam Collection Dataset.
+The project includes:
 
 
 
-\## Features
+\* Data preprocessing using TF-IDF
 
-
-
-\* Spam Detection Model
-
-\* TF-IDF Text Vectorization
-
-\* Logistic Regression Classifier
+\* Logistic Regression model
 
 \* FastAPI REST API
 
@@ -30,7 +24,7 @@ The model is trained using TF-IDF Vectorization and Logistic Regression on the S
 
 \* MLflow Experiment Tracking
 
-\* Git \& GitHub Version Control
+\* GitHub Version Control
 
 
 
@@ -38,79 +32,115 @@ The model is trained using TF-IDF Vectorization and Logistic Regression on the S
 
 
 
+```text
+
 spam-detection-mlops/
 
-
+│
 
 ├── api/
 
+│   └── app.py
 
+│
 
 ├── data/
 
+│   └── spam.csv
 
+│
 
 ├── models/
 
+│   ├── spam\_model.pkl
 
+│   └── vectorizer.pkl
+
+│
 
 ├── src/
 
+│   └── train.py
 
+│
 
 ├── app.py
 
-
-
 ├── requirements.txt
-
-
 
 └── README.md
 
-
-
-\## Model Performance
-
-
-
-Accuracy: 96%
+```
 
 
 
-\## Run Streamlit
+\## Model
 
 
 
-streamlit run app.py
+\* TF-IDF Vectorizer
+
+\* Logistic Regression Classifier
 
 
 
-\## Run FastAPI
+Accuracy achieved: 96%
 
 
+
+\## Running the Project
+
+
+
+\### Train Model
+
+
+
+```bash
+
+python src/train.py
+
+```
+
+
+
+\### Run FastAPI
+
+
+
+```bash
 
 uvicorn api.app:app --reload
 
-
-
-\## Technologies Used
+```
 
 
 
-\* Python
+\### Run Streamlit
 
-\* Scikit-Learn
 
-\* FastAPI
 
-\* Streamlit
+```bash
 
-\* MLflow
+streamlit run app.py
 
-\* Git
+```
 
-\* GitHub
+
+
+\## Future Improvements
+
+
+
+\* Docker
+
+\* GitHub Actions
+
+\* Automated Testing
+
+\* Cloud Deployment
+
+\* Monitoring with Prometheus and Grafana
 
 
 
