@@ -2,3 +2,6 @@ venv/
 __pycache__/
 mlruns/
 mlflow.db
+mlflow_old.db
+mlruns_old/
+requirements_full_backup.txt
